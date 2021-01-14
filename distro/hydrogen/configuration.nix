@@ -45,7 +45,7 @@
   # };
 
   # Enable the GNOME 3 Desktop Environment.
-  services.xserver.gnome3.enable = true;
+  u7693.nixos.gui.gnome3.enable = true;
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
