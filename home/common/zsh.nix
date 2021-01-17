@@ -53,16 +53,6 @@ in
     inherit shellAliases;
   };
 
-  # https://rycee.gitlab.io/home-manager/options.html#opt-services.lorri.enable
-  services.lorri.enable = true;
-
-  # https://rycee.gitlab.io/home-manager/options.html#opt-programs.direnv.enable
-  programs.direnv = {
-    enable = true;
-    enableNixDirenvIntegration = true;
-    enableZshIntegration = true;
-  };
-
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.bat.enable
   programs.bat.enable = true;
 
