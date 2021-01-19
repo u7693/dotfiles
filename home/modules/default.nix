@@ -1,5 +1,6 @@
 {
   imports = [
+    ./cargo-atcoder.nix
     ./lorri.nix
 
     # lang
