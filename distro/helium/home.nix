@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [ ./home ];
 
@@ -6,4 +8,9 @@
     nodejs.enable = true;
     rust.enable = true;
   };
+
+  home.packages = with pkgs; [
+    asciinema
+    exercism
+  ];
 }
