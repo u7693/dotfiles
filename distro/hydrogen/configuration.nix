@@ -9,8 +9,13 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      ./nixos
+      ../../nixos
     ];
+
+  u7693.nixos = {
+    user.enable = true;
+    gnome3.enable = true;
+  };
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
@@ -43,9 +48,6 @@
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
   # };
-
-  # Enable the GNOME 3 Desktop Environment.
-  u7693.nixos.gui.gnome3.enable = true;
 
   # Configure keymap in X11
   # services.xserver.layout = "us";

@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.u7693.nixos.gui.gnome3;
+let cfg = config.u7693.nixos.gnome3;
 in {
   options = {
-    u7693.nixos.gui.gnome3 = {
+    u7693.nixos.gnome3 = {
       enable = mkEnableOption "GNOME 3";
     };
   };

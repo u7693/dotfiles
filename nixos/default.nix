@@ -1,6 +1,6 @@
 {
   imports = [
-    ./common
-    ./modules
+    ./gnome3.nix
+    ./user.nix
   ];
 }

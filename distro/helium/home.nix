@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./home ];
+  imports = [ ../../home ];
 
   u7693.home = {
     shell.enable = true;
