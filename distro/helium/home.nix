@@ -4,7 +4,10 @@
   imports = [ ./home ];
 
   u7693.home.dev = {
-    cargo-atcoder.enable = true;
+    cargo-atcoder = {
+      enable = true;
+      config = builtins.readFile ./cargo-atcoder.toml;
+    };
     lorri.enable = true;
     nodejs.enable = true;
     rust.enable = true;
