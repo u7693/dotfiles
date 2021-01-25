@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.u7693.home.dev.lorri;
+let cfg = config.u7693.home.lorri;
 in {
   options = {
-    u7693.home.dev.lorri = {
+    u7693.home.lorri = {
       enable = mkEnableOption "lorri";
     };
   };

@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.u7693.home.dev.nodejs;
+let cfg = config.u7693.home.nodejs;
 in {
   options = {
-    u7693.home.dev.nodejs = {
+    u7693.home.nodejs = {
       enable = mkEnableOption "NodeJS";
 
       package = mkOption {

@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.u7693.home.dev.cargo-atcoder;
+let cfg = config.u7693.home.cargo-atcoder;
 in {
   options = {
-    u7693.home.dev.cargo-atcoder = {
+    u7693.home.cargo-atcoder = {
       enable = mkEnableOption "cargo-atcoder";
 
       config = mkOption {

@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.u7693.home.dev.rust;
+let cfg = config.u7693.home.rust;
 in {
   options = {
-    u7693.home.dev.rust = {
+    u7693.home.rust = {
       enable = mkEnableOption "Rust";
 
       rustupHome = mkOption {
