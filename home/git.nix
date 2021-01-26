@@ -1,10 +1,9 @@
 { config, lib, pkgs, ... }:
 
-with lib; with builtins;
+with lib;
+
 let
   cfg = config.u7693.home.git;
-
-  user = fromJSON (readFile ../user.json);
 
   aliases = {
     lg = "log --oneline --graph";
@@ -20,7 +19,22 @@ let
 in {
   options = {
     u7693.home.git = {
-      enable = mkEnableOption "git";
+      enable = mkEnableOption "Git";
+
+      userName = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+      };
+
+      userEmail = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+      };
+
+      userSigningKey = mkOption {
+        type = types.nullOr types.str;
+        default = null;
+      };
     };
   };
 
@@ -29,9 +43,9 @@ in {
     programs.git = {
       enable = true;
       inherit aliases extraConfig ignores;
-      signing.key = user.gpg;
-      userEmail = user.email;
-      userName = user.name;
+      signing.key = cfg.userSigningKey;
+      userEmail = cfg.userEmail;
+      userName = cfg.userName;
     };
 
     home.packages = [ pkgs.gitAndTools.gitflow ];
