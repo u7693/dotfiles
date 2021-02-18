@@ -84,4 +84,14 @@
   "*.code-workspace"
 
   # End of https://www.toptal.com/developers/gitignore/api/linux,vscode,emacs,diff,patch
+
+
+  # Created by https://www.toptal.com/developers/gitignore/api/direnv
+  # Edit at https://www.toptal.com/developers/gitignore?templates=direnv
+
+  ### direnv ###
+  ".direnv"
+  ".envrc"
+
+  # End of https://www.toptal.com/developers/gitignore/api/direnv
 ]
