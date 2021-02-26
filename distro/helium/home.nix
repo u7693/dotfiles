@@ -19,7 +19,10 @@ in {
     };
     lorri.enable = true;
     nodejs.enable = true;
-    rust.enable = true;
+    rust = {
+      enable = true;
+      wasm = true;
+    };
   };
 
   home.packages = with pkgs; [
