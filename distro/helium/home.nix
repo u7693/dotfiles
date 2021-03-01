@@ -18,7 +18,10 @@ in {
       config = builtins.readFile ./cargo-atcoder.toml;
     };
     lorri.enable = true;
-    nodejs.enable = true;
+    nodejs = {
+      enable = true;
+      serverless = true;
+    };
     rust = {
       enable = true;
       wasm = true;

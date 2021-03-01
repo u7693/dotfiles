@@ -11,11 +11,20 @@ in {
         type = types.package;
         default = pkgs.nodejs;
       };
+
+      serverless  = mkOption {
+        type = types.bool;
+        default = false;
+      };
     };
   };
 
   config = mkIf cfg.enable {
-    home.packages = [ cfg.package ];
+    home.packages = with pkgs; [
+      cfg.package
+    ] ++ optionals cfg.serverless [
+      nodePackages.serverless
+    ];
 
     home.sessionVariables = {
       NPM_CONFIG_USERCONFIG = "${config.xdg.configHome}/npm/npmrc";
